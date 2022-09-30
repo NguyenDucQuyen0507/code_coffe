@@ -1,0 +1,71 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    
+}
+.main{
+    margin: 5% auto 0;
+    /* Muốn cho nó nằm giữa thì ta sẽ cho chiều rộng cho nó.
+    Mà nếu cho chiều rộng là 100% thì nó vẫn giữ nguyên như vậy.*/
+    /* max-width: 60%; */
+    /* hoặc */
+    max-width: 700px;
+}
+
+.bars{
+   display: flex;
+   position: relative;
+}
+
+.bars__name{
+    display: flex;
+    align-items: center;
+    /* min-width: 100px; */
+    font-size: 1rem;
+    padding: 5px 25px;
+    background-color: rgb(255, 255, 255);
+    color: aquamarine;
+    box-shadow: 1px 2px 5px gray;
+    /* border-bottom: 5px solid ; */
+    opacity: 0.7;
+}   
+
+.bars .active{
+    opacity: 1;
+}
+.bars__name:hover{
+    /* opacity: 1; */
+    cursor: pointer;
+}
+.bars__name--name{
+    margin-left: 5px;
+}  
+
+.bars__line{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 5px;
+    width: 0px;
+    background-color: aquamarine;
+    border-radius: 20px;
+    transition: all 0.3s linear;
+}
+
+/* content */
+.content{
+    margin-top: 20px;
+}
+.content__title{
+    display: none;
+}
+.content .active{
+    display: block;
+}
